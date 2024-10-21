@@ -1,4 +1,10 @@
 allow_embedding: false
+db_schema:
+  hello:
+    client: none
+    columns: []
+    server: full
+    title: Hello
 name: Classic 1
 package_name: Classic_1
 runtime_options:
