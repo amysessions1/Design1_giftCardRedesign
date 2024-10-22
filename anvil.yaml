@@ -1,10 +1,45 @@
 allow_embedding: false
 db_schema:
+  balances:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: userID
+      type: number
+    server: full
+    title: balances
+  business_data:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: businessID
+      type: number
+    - admin_ui: {order: 1, width: 200}
+      name: businessName
+      type: string
+    - admin_ui: {order: 2, width: 200}
+      name: businessUsername
+      type: string
+    - admin_ui: {order: 3, width: 200}
+      name: businessPassword
+      type: string
+    server: full
+    title: business_data
   hello:
     client: none
     columns: []
     server: full
     title: Hello
+  unlinked_balances:
+    client: none
+    columns: []
+    server: full
+    title: unlinked_balances
+  user_data:
+    client: none
+    columns: []
+    server: full
+    title: user_data
 name: Classic 1
 package_name: Classic_1
 runtime_options:
