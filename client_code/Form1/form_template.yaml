@@ -1,9 +1,18 @@
 components:
-- layout_properties: {slot: default}
-  name: content_panel
+- components:
+  - layout_properties: {}
+    name: button_1
+    properties: {align: center, icon: 'fa:address-card', text: '  View Gift Cards'}
+    type: Button
+  - layout_properties: {width: 880.9896259765625}
+    name: linear_panel_1
+    properties: {}
+    type: LinearPanel
+  layout_properties: {slot: default}
+  name: flow_panel_1
   properties: {}
-  type: ColumnPanel
+  type: FlowPanel
 container:
-  properties: {html: '@theme:dashboard.html'}
+  properties: {html: '@theme:dashboard.html', visible: true}
   type: HtmlTemplate
 is_package: true
