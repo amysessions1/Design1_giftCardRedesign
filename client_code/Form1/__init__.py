@@ -18,7 +18,7 @@ class Form1(Form1Template):
     business_id = ["APPLE", "apple_company", "password"]
     anvil.server.call("add_business",business_id)
     """This method is called when the button is clicked"""
-    business_id = ["APPLE", "apple_company", "password"]
+    business_id = ["APPLE", "apple_company1", "password"]
     anvil.server.call("add_business",business_id)
     """This method is called when the button is clicked"""
     business_id = ["APPLE", "apple_company2", "password"]
@@ -27,23 +27,33 @@ class Form1(Form1Template):
     business_id = ["APPLE", "apple_company3", "password"]
     anvil.server.call("add_business",business_id)
     """Example of adding a user"""
-    # user_id = ["Billy Joel", "pianoMan1234", "password", "3098675309"]
-    # anvil.server.call("add_user",user_id)
-    # """Example of adding a user"""
-    # user_id = ["Billy Joel", "pianoMan12345", "password", "3098675309"]
-    # anvil.server.call("add_user",user_id)
-    # """Example of adding a user"""
-    # user_id = ["Billy Joel", "pianoMan12346", "password", "3098675309"]
-    # anvil.server.call("add_user",user_id)
-    # """Example of adding a user"""
-    # user_id = ["Billy Joel", "pianoMan12347", "password", "3098675309"]
-    # anvil.server.call("add_user",user_id)
+    user_id = ["Billy Joel", "pianoMan1234", "password", "3098675309"]
+    anvil.server.call("add_user",user_id)
+    """Example of adding a user"""
+    user_id = ["Billy Joel", "pianoMan12345", "password", "3098675309"]
+    anvil.server.call("add_user",user_id)
+    """Example of adding a user"""
+    user_id = ["Billy Joel", "pianoMan12346", "password", "3098675309"]
+    anvil.server.call("add_user",user_id)
+    """Example of adding a user"""
+    user_id = ["Billy Joel", "pianoMan12347", "password", "3098675309"]
+    anvil.server.call("add_user",user_id)
 
-    # print(anvil.server.call("get_business_data"))
-    # print(anvil.server.call('get_user_data'))
+    user = anvil.server.call("user_login", "pianoMan12345", "password")
+    comp = anvil.server.call('business_login', "apple_company2", "password")
 
-    # print(anvil.server.call("user_login", "pianoMan12347", "password"))
-    # print(anvil.server.call('business_login', "apple_company3", "password"))
+    anvil.server.call('add_funds', user, comp, 10)
+    anvil.server.call('add_funds', user, comp, 10)
+    user = anvil.server.call("user_login", "pianoMan12346", "password")
+    comp = anvil.server.call('business_login', "apple_company2", "password")
+    anvil.server.call('add_funds', user, comp, 10)
+    anvil.server.call('add_funds', user, comp, 15)
+    user = anvil.server.call("user_login", "pianoMan12347", "password")
+    comp = anvil.server.call('business_login', "apple_company", "password")
+    anvil.server.call('add_funds', user, comp, 10)
+    anvil.server.call('add_funds', user, comp, 15)
+
+
     
 
 
