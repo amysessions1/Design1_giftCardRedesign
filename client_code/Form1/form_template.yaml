@@ -1,13 +1,25 @@
 components:
 - components:
-  - layout_properties: {grid_position: 'DITJRN,QGXPJL'}
-    name: text_box_1
-    properties: {}
-    type: TextBox
+  - layout_properties: {grid_position: 'JJJCIB,ECDTVG'}
+    name: label_1
+    properties: {align: center, text: 'What are you using ____ for?'}
+    type: Label
+  - layout_properties: {grid_position: 'DCEDDK,ZXTWAV'}
+    name: Business
+    properties: {text: Business Use}
+    type: Button
+  - layout_properties: {grid_position: 'OXQFTO,OYNNQH'}
+    name: Personal
+    properties: {text: Personal Use}
+    type: Button
   layout_properties: {slot: default}
   name: content_panel
   properties: {}
   type: ColumnPanel
+- layout_properties: {slot: title}
+  name: text_box_1
+  properties: {text: Sign In}
+  type: TextBox
 container:
   properties: {html: '@theme:dashboard.html'}
   type: HtmlTemplate
