@@ -5,6 +5,8 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 
+id
+
 
 class amy_example_implementation(amy_example_implementationTemplate):
   def __init__(self, **properties):
@@ -18,6 +20,9 @@ class amy_example_implementation(amy_example_implementationTemplate):
     business_id = ["APPLE", "apple_company", "password"]
     anvil.server.call("add_business",business_id)
 
+  def ex_business_login(self, **event_args):
+    anvil.server.call('business_login')
+  
   def ex_add_user(self, **event_args):
     """Example of adding a user"""
     user_id = ["Billy Joel", "pianoMan1234", "password", "3098675309"]

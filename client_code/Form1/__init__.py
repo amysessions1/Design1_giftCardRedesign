@@ -6,6 +6,7 @@ from anvil.tables import app_tables
 import anvil.server
 
 
+
 class Form1(Form1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
