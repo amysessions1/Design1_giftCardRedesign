@@ -1,3 +1,6 @@
+import anvil.tables as tables
+import anvil.tables.query as q
+from anvil.tables import app_tables
 import anvil.server
 from random import randrange
 
@@ -8,49 +11,46 @@ from random import randrange
 # them with @anvil.server.callable.
 
 
-business_data = []
-user_data = []
-business_index = []
-user_index = []
-balances = []
-unlinked_balances = []
-
 @anvil.server.callable
 def get_user_data():
-  return user_data
+  return app_tables.user_data
 
 @anvil.server.callable
 def get_business_data():
-  return business_data
+  return app_tables.business_data
 
 
 @anvil.server.callable
 def add_business(business_info):
   #business_info should be a list of info in the form [{business name}, {business_username}, {business_password}] all as strings
   #generate business_id
+  add_data={}
   business_id = randrange(1000000000000000,9999999999999999)
   #check if business_id is already assigned to another business
-  while business_id in business_index:
+  print(app_tables.business_data.get(businessID=business_id))
+  while app_tables.business_data.search(businessID=business_id) is not None:
     business_id = randrange(1000000000000000,9999999999999999)
+  add_data["businessID"] = business_id
   #check for unique username
-  for i in business_data:
-    if i[2] == business_info[1]:
-      return -1
+  print(app_tables.business_data.get(username=business_info[1]))
+  if app_tables.business_data.search(username=business_info[1]) is not None:
+    return -1
+  add_data["Name"] = business_info[0]
+  add_data["username"] = business_info[1]
+  add_data["password"] = business_info[2]
   #add business to business_data
-  add_data = [business_id, business_info[0], business_info[1], business_info[2]]
-  business_data.append(add_data)
-  #add business to business_index
-  business_index.append(business_id)
+  app_tables.business_data.add_row(**add_data)
   #add business to balances table
-  balances.append([])
-  #add business to unlinked_balances
-  unlinked_balances.append([])
+  # balances.append([])
+  # #add business to unlinked_balances
+  # unlinked_balances.append([])
   print("new business added")
   return 0
 
 
 @anvil.server.callable
 def add_user(user_info):
+  pass
   #user_info should be a list of info in the form [{user name}, {user_username}, {user_password}, {phone}] all as strings
   #generate user_id
   user_id = randrange(1000000000000000,9999999999999999)
@@ -58,11 +58,13 @@ def add_user(user_info):
   while user_id in user_index:
     user_id = randrange(1000000000000000,9999999999999999)
   for i in user_data:
+    print(i, user_info[1])
     if i[2] == user_info[1]:
       return -1
   #add user to user_data
   add_data = [user_id, user_info[0], user_info[1], user_info[2], user_info[3]]
   user_data.append(add_data)
+  print(user_data[0])
   #add user to user_index
   user_index.append(user_id)
   #add user to balances table
@@ -76,6 +78,7 @@ def add_user(user_info):
 
 @anvil.server.callable
 def business_login(inp_username, inp_password):
+  pass
   j = business_data[1]
   print(j)
   for business in business_data:
@@ -90,6 +93,7 @@ def business_login(inp_username, inp_password):
 
 @anvil.server.callable
 def user_login(inp_username, inp_password):
+  pass
   print(user_data)
   for user in user_data:
     if user[2] == inp_username:

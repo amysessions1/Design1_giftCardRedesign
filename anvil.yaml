@@ -1,5 +1,53 @@
 allow_embedding: false
-db_schema: {}
+db_schema:
+  balances:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: business
+      type: number
+    - admin_ui: {order: 1, width: 200}
+      name: user_data
+      type: simpleObject
+    server: full
+    title: balances
+  business_data:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: businessID
+      type: number
+    - admin_ui: {order: 1, width: 200}
+      name: username
+      type: string
+    - admin_ui: {order: 2, width: 200}
+      name: password
+      type: string
+    - admin_ui: {order: 3, width: 200}
+      name: Name
+      type: string
+    server: full
+    title: business_data
+  user_data:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: userID
+      type: number
+    - admin_ui: {order: 1, width: 200}
+      name: username
+      type: string
+    - admin_ui: {order: 2, width: 200}
+      name: password
+      type: string
+    - admin_ui: {order: 3, width: 200}
+      name: Name
+      type: string
+    - admin_ui: {order: 4, width: 200}
+      name: phone
+      type: string
+    server: full
+    title: user_data
 name: Classic 1
 package_name: Classic_1
 runtime_options:
