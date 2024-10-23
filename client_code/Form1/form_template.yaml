@@ -1,5 +1,10 @@
 components:
-- layout_properties: {slot: default}
+- components:
+  - layout_properties: {grid_position: 'WSCGNU,UJQCYX'}
+    name: button_1
+    properties: {align: center, font_size: 25, icon: 'fa:address-card', text: ' View Gift Cards'}
+    type: Button
+  layout_properties: {slot: default}
   name: content_panel
   properties: {}
   type: ColumnPanel
