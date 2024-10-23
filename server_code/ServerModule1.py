@@ -96,7 +96,7 @@ def add_funds(user_id, business_id, amount):
   row['user_data'][str(user_id)] = bal
   print(row['user_data'])
   app_tables.balances.get(business=business_id).update(user_data=row['user_data'])
-  return 0
+  return row['user_data'][str(user_id)]
   
   
     
