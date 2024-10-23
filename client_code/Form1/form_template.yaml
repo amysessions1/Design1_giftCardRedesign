@@ -1,9 +1,14 @@
 components:
-- layout_properties: {slot: default}
-  name: content_panel
-  properties: {}
+- components:
+  - layout_properties: {grid_position: 'BEDZBB,ZNOJSH'}
+    name: view_cards
+    properties: {text: ' View Cards'}
+    type: Button
+  layout_properties: {slot: default}
+  name: card_1
+  properties: {role: card}
   type: ColumnPanel
 container:
-  properties: {html: '@theme:dashboard.html'}
+  properties: {html: '@theme:dashboard.html', visible: true}
   type: HtmlTemplate
 is_package: true
