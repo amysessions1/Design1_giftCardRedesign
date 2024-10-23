@@ -28,12 +28,12 @@ def add_business(business_info):
   business_id = randrange(1000000000000000,9999999999999999)
   #check if business_id is already assigned to another business
   print(app_tables.business_data.get(businessID=business_id))
-  while app_tables.business_data.search(businessID=business_id) is not None:
+  while app_tables.business_data.get(businessID=business_id) is not None:
     business_id = randrange(1000000000000000,9999999999999999)
   add_data["businessID"] = business_id
   #check for unique username
   print(app_tables.business_data.get(username=business_info[1]))
-  if app_tables.business_data.search(username=business_info[1]) is not None:
+  if app_tables.business_data.get(username=business_info[1]) is not None:
     return -1
   add_data["Name"] = business_info[0]
   add_data["username"] = business_info[1]
@@ -41,11 +41,13 @@ def add_business(business_info):
   #add business to business_data
   app_tables.business_data.add_row(**add_data)
   #add business to balances table
+  app_tables.balances.add_row(business=business_id, user_data={})
   # balances.append([])
   # #add business to unlinked_balances
   # unlinked_balances.append([])
   print("new business added")
   return 0
+
 
 
 @anvil.server.callable
