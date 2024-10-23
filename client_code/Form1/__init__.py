@@ -6,6 +6,7 @@ from anvil.tables import app_tables
 import anvil.server
 
 
+
 class Form1(Form1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
@@ -42,8 +43,8 @@ class Form1(Form1Template):
     user = anvil.server.call("user_login", "pianoMan12345", "password")
     comp = anvil.server.call('business_login', "apple_company2", "password")
 
-    anvil.server.call('add_funds', user, comp, 10)
-    anvil.server.call('add_funds', user, comp, 10)
+    anvil.server.call('add_funds', user, comp, 10.1)
+    anvil.server.call('add_funds', user, comp, 10.5)
     user = anvil.server.call("user_login", "pianoMan12346", "password")
     comp = anvil.server.call('business_login', "apple_company2", "password")
     anvil.server.call('add_funds', user, comp, 10)
@@ -52,6 +53,10 @@ class Form1(Form1Template):
     comp = anvil.server.call('business_login', "apple_company", "password")
     anvil.server.call('add_funds', user, comp, 10)
     anvil.server.call('add_funds', user, comp, 15)
+
+    print(anvil.server.call('make_purchace', user, comp, 10))
+    print(anvil.server.call('make_purchace', user, comp, 20))
+    print(anvil.server.call('make_purchace', user, comp, 20))
 
 
     

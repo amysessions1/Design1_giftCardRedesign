@@ -87,16 +87,34 @@ def add_funds(user_id, business_id, amount):
   if row is None:
     return -1
   bal = row['user_data'].get(str(user_id))
-  print(bal)
   if bal is not None:
     bal += amount
   else:
     bal = amount
-  print(bal)
   row['user_data'][str(user_id)] = bal
   print(row['user_data'])
   app_tables.balances.get(business=business_id).update(user_data=row['user_data'])
   return row['user_data'][str(user_id)]
+
+
+@anvil.server.callable
+def make_purchace(user_id, business_id, amount_owed):
+  row = dict(app_tables.balances.get(business=business_id))
+  if row is None:
+    return -1
+  bal = row['user_data'].get(str(user_id))
+  if bal is None:
+    return amount_owed, 0
+  elif bal > amount_owed:
+    bal -= amount_owed
+    amount_owed = 0
+    row['user_data'][str(user_id)] = bal
+  else:
+    amount_owed -= bal
+    bal = 0
+    row['user_data'].pop(str(user_id))
+  app_tables.balances.get(business=business_id).update(user_data=row['user_data'])
+  return amount_owed, bal
   
   
     
