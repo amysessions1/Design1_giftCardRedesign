@@ -1,9 +1,6 @@
 from ._anvil_designer import amy_example_implementationTemplate
 from anvil import *
 import anvil.server
-import anvil.tables as tables
-import anvil.tables.query as q
-from anvil.tables import app_tables
 
 
 class amy_example_implementation(amy_example_implementationTemplate):
