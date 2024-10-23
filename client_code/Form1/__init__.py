@@ -18,6 +18,6 @@ class Form1(Form1Template):
     pass
 
   def Business_click(self, **event_args):
-    """This method is called when the button is clicked"""
+    """Business button goes to a login page for businesses, which Kennedy is working on"""
     open_form('NewForm')
     
