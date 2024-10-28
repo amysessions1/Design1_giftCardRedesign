@@ -14,7 +14,7 @@ class homepage(homepageTemplate):
 
     # Any code you write here will run before the form opens.
 
-  def view_cards_click(self, **event_args):
+  def add_business_click(self, **event_args):
     alert(
       content=cardedit(),
       title="Edit Cards",

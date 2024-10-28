@@ -1,0 +1,7 @@
+components:
+- layout_properties: {grid_position: 'DZREVD,UMRVHY'}
+  name: repeating_panel_1
+  properties: {item_template: Form1.ItemTemplate3}
+  type: RepeatingPanel
+container: {type: ColumnPanel}
+is_package: true
