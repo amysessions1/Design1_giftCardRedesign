@@ -8,9 +8,7 @@ unique_ids:
     Form1.ItemTemplate3: '1730152733552415701565900.3671'
     cardedit: '17297200288281741803910.8505478'
     homepage: '1729547112984417017372858.70746'
-    homepage.ItemTemplate4: '1730152403978197875912928.02652'
-    homepage.ItemTemplate5: '1730153368318257495573121.01666'
-    homepage.RowTemplate1: '1729719717917744563846262.1129'
+    homepage.ItemTemplate1: '1730153518537615435512704.4626'
   modules: {}
   scripts: {}
   server_modules:
