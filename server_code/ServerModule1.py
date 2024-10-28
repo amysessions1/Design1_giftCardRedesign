@@ -116,7 +116,9 @@ def make_purchace(user_id, business_id, amount_owed):
   app_tables.balances.get(business=business_id).update(user_data=row['user_data'])
   return amount_owed, bal
   
-  
+
+@anvil.server.callable
+def get_
     
   
 
