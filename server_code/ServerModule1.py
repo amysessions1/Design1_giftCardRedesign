@@ -118,7 +118,7 @@ def make_purchace(user_id, business_id, amount_owed):
   
 
 @anvil.server.callable
-def get_
+def get_user
     
   
 
