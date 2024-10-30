@@ -118,7 +118,30 @@ def make_purchace(user_id, business_id, amount_owed):
   
 
 @anvil.server.callable
-def get_
+def get_user_info(user_id):
+  row = app_tables.user_data.get(userID=user_id)
+  if row:
+      # Convert row values to a list
+      r = [value for value in row]
+      r = [r[2][1], r[4][1], r[1][1]]
+      return r
+  else:
+      print("Row not found.")
+      return None
     
-  
+
+@anvil.server.callable
+def get_business_info(business_id):
+  row = app_tables.business_data.get(businessID=business_id)
+  if row:
+      # Convert row values to a list
+      r = [value for value in row]
+      r = [r[0][1], r[2][1]]
+      return r
+  else:
+      print("Row not found.")
+      return None
+
+
+
 

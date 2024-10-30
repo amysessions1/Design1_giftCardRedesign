@@ -58,6 +58,9 @@ class Form1(Form1Template):
     print(anvil.server.call('make_purchace', user, comp, 20))
     print(anvil.server.call('make_purchace', user, comp, 20))
 
+    print(anvil.server.call('get_user_info', user))
+    print(anvil.server.call('get_business_info', comp))
+
 
     
 
