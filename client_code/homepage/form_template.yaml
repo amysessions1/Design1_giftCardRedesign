@@ -17,30 +17,44 @@ components:
     name: add_business
     properties: {background: '#f97676', bold: true, enabled: true, icon: 'fa:address-card', italic: false, role: null, text: ' Add Business'}
     type: Button
-  - layout_properties: {}
+  - event_bindings: {click: add_user_click}
     name: add_user
-    properties: {text: add_user}
+    properties: {text: Add User}
+    type: Button
+  - event_bindings: {click: business_login_click}
+    layout_properties: {}
+    name: business_login
+    properties: {icon_align: left_edge, text: Business Login}
     type: Button
   - layout_properties: {}
-    name: business_login
-    properties: {text: business_login}
+    name: user_login
+    properties: {text: User Login}
     type: Button
-  - name: button_1
-    properties: {text: button_1}
+  - event_bindings: {click: button_2_click}
+    layout_properties: {}
+    name: add_funds
+    properties: {text: Add Funds}
     type: Button
-  - name: button_2
-    properties: {text: button_2}
+  - layout_properties: {}
+    name: make_purchace
+    properties: {text: Make Purchase}
     type: Button
-  - name: button_3
-    properties: {text: button_3}
+  - layout_properties: {}
+    name: get_user_info
+    properties: {text: Get User Info}
     type: Button
-  - name: repeating_panel_1
-    properties: {item_template: homepage.ItemTemplate1}
-    type: RepeatingPanel
   layout_properties: {slot: default}
   name: linear_panel_1
   properties: {}
   type: LinearPanel
+- layout_properties: {slot: sidebar}
+  name: drop_down_1
+  properties: {}
+  type: DropDown
+- layout_properties: {slot: title}
+  name: label_1
+  properties: {text: APP HOMEPAGE}
+  type: Label
 container:
   properties: {html: '@theme:dashboard.html', visible: true}
   type: HtmlTemplate

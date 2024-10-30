@@ -5,6 +5,8 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from ..cardedit import cardedit
+from ..adduser import adduser
+from ..businesslogin import businesslogin
 
 
 class homepage(homepageTemplate):
@@ -20,3 +22,19 @@ class homepage(homepageTemplate):
       title="Edit Cards",
       large=True,
     )
+    
+  def add_user_click(self, **event_args):
+    alert(
+      content=adduser(),
+      title="Add User",
+      large=True,
+    )
+
+  def business_login_click(self, **event_args):
+    alert(
+      content=businesslogin(),
+      title="Business Login",
+      large=True,
+    )
+    
+    
