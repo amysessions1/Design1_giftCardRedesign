@@ -31,7 +31,6 @@ components:
     properties: {text: User Login}
     type: Button
   - event_bindings: {click: button_2_click}
-    layout_properties: {}
     name: add_funds
     properties: {text: Add Funds}
     type: Button
