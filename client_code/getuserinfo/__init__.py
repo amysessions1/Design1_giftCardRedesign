@@ -1,9 +1,9 @@
-from ._anvil_designer import cardeditTemplate
+from ._anvil_designer import getuserinfoTemplate
 from anvil import *
 import anvil.server
 
 
-class cardedit(cardeditTemplate):
+class getuserinfo(getuserinfoTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)

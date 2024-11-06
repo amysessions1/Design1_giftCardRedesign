@@ -27,19 +27,22 @@ components:
     name: business_login
     properties: {icon_align: left_edge, text: Business Login}
     type: Button
-  - layout_properties: {}
+  - event_bindings: {click: user_login_click}
+    layout_properties: {}
     name: user_login
     properties: {text: User Login}
     type: Button
-  - event_bindings: {click: button_2_click}
+  - event_bindings: {click: add_funds_click}
     name: add_funds
     properties: {text: Add Funds}
     type: Button
-  - layout_properties: {}
-    name: make_purchace
+  - event_bindings: {click: make_purchase_click}
+    layout_properties: {}
+    name: make_purchase
     properties: {text: Make Purchase}
     type: Button
-  - layout_properties: {}
+  - event_bindings: {click: get_user_info_click}
+    layout_properties: {}
     name: get_user_info
     properties: {text: Get User Info}
     type: Button

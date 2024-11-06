@@ -4,9 +4,13 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-from ..cardedit import cardedit
+from ..addbusiness import addbusiness
 from ..adduser import adduser
 from ..businesslogin import businesslogin
+from ..userlogin import userlogin
+from ..makepurchase import makepurchase
+from ..addfunds import addfunds
+from ..getuserinfo import getuserinfo
 
 
 class homepage(homepageTemplate):
@@ -18,7 +22,7 @@ class homepage(homepageTemplate):
 
   def add_business_click(self, **event_args):
     alert(
-      content=cardedit(),
+      content=addbusiness(),
       title="Edit Cards",
       large=True,
     )
@@ -36,5 +40,37 @@ class homepage(homepageTemplate):
       title="Business Login",
       large=True,
     )
+    
+  def user_login_click(self, **event_args):
+    alert(
+      content=userlogin(),
+      title="User Login",
+      large=True,
+    )
+
+  def make_purchase_click(self, **event_args):
+    alert(
+      content=makepurchase(),
+      title="Make Purchase",
+      large=True,
+    )
+
+  def add_funds_click(self, **event_args):
+    alert(
+      content=addfunds(),
+      title="Add Funds",
+      large=True,
+    )
+
+  def get_user_info_click(self, **event_args):
+    alert(
+      content=getuserinfo(),
+      title="Get User Info",
+      large=True,
+    )
+
+
+
+    
     
     
