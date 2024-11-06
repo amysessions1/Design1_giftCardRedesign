@@ -96,6 +96,20 @@ def add_funds(user_id, business_id, amount):
   app_tables.balances.get(business=business_id).update(user_data=row['user_data'])
   return row['user_data'][str(user_id)]
 
+@anvil.server.callable
+def add_funds_phone(phone_num, business_id, amount):
+  user = app_tables.user_data.get(phone=phone_num)
+  if user['userID'] is not None:
+    return add_funds(user['userID'], business_id, amount)
+  else:
+    return -1
+
+def add_funds_username(username_inp, business_id, amount):
+  user = app_tables.user_data.get(username=username_inp)
+  if user['userID'] is not None:
+    return add_funds(user['userID'], business_id, amount)
+  else:
+    return -1
 
 @anvil.server.callable
 def make_purchace(user_id, business_id, amount_owed):
