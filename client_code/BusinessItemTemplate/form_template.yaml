@@ -1,0 +1,25 @@
+components:
+- data_bindings:
+  - {code: 'self.item["name"]', property: tag, writeback: false}
+  - {code: 'self.item["name"]', property: text, writeback: false}
+  event_bindings: {show: name_show}
+  layout_properties: {grid_position: 'MXPTBX,NOZRJA'}
+  name: name
+  properties: {}
+  type: Label
+- data_bindings:
+  - {code: 'self.item["username"]', property: tag, writeback: false}
+  - {code: 'self.item["username"]', property: text, writeback: false}
+  layout_properties: {grid_position: 'JZDLUG,FGLXBL'}
+  name: username
+  properties: {}
+  type: Label
+- data_bindings:
+  - {code: 'self.item[''password'']', property: tag, writeback: false}
+  - {code: 'self.item[''password'']', property: text, writeback: false}
+  layout_properties: {grid_position: 'FISITA,GVSOCT'}
+  name: password
+  properties: {}
+  type: Label
+container: {type: ColumnPanel}
+is_package: true

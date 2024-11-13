@@ -13,6 +13,10 @@ components:
   properties: {role: card}
   type: ColumnPanel
 - components:
+  - layout_properties: {}
+    name: business_list_panel
+    properties: {item_template: BusinessItemTemplate}
+    type: RepeatingPanel
   - event_bindings: {click: add_business_click}
     layout_properties: {}
     name: add_business

@@ -26,7 +26,15 @@ class homepage(homepageTemplate):
       title="Edit Cards",
       large=True,
     )
-    
+  def __init__(self, **properties):
+    self.init_components(**properties)
+    self.load_businesses()  # Load businesses when the form opens
+
+  def load_businesses(self):
+    # Call the server function to get all businesses
+    businesses = anvil.server.call('get_all_businesses')
+    # Display the data in the Repeating Panel
+    self.business_list_panel.items = businesses
   def add_user_click(self, **event_args):
     alert(
       content=adduser(),
@@ -68,6 +76,7 @@ class homepage(homepageTemplate):
       title="Get User Info",
       large=True,
     )
+
 
 
 
