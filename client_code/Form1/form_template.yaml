@@ -1,5 +1,11 @@
 components:
-- layout_properties: {slot: default}
+- components:
+  - event_bindings: {click: amy_testing_click}
+    layout_properties: {grid_position: 'NFKMXJ,LFTHDU'}
+    name: amy_testing
+    properties: {text: amy testing}
+    type: Button
+  layout_properties: {slot: default}
   name: content_panel
   properties: {}
   type: ColumnPanel

@@ -1,10 +1,70 @@
 allow_embedding: false
 db_schema:
-  hello:
+  balances:
     client: none
-    columns: []
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: business
+      type: number
+    - admin_ui: {order: 1, width: 200}
+      name: user_data
+      type: simpleObject
+    - admin_ui: {order: 2, width: 200}
+      name: unlinked
+      type: simpleObject
     server: full
-    title: Hello
+    title: balances
+  business_data:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: businessID
+      type: number
+    - admin_ui: {order: 1, width: 200}
+      name: username
+      type: string
+    - admin_ui: {order: 2, width: 200}
+      name: password
+      type: string
+    - admin_ui: {order: 3, width: 200}
+      name: Name
+      type: string
+    server: full
+    title: business_data
+  unlinked:
+    client: none
+    columns:
+    - admin_ui: {order: 1, width: 200}
+      name: value
+      type: number
+    - admin_ui: {order: 0, width: 200}
+      name: unlinkedID
+      type: number
+    - admin_ui: {order: 4, width: 200}
+      name: businessID
+      type: number
+    server: full
+    title: unlinked
+  user_data:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: userID
+      type: number
+    - admin_ui: {order: 1, width: 200}
+      name: username
+      type: string
+    - admin_ui: {order: 2, width: 200}
+      name: password
+      type: string
+    - admin_ui: {order: 3, width: 200}
+      name: Name
+      type: string
+    - admin_ui: {order: 4, width: 200}
+      name: phone
+      type: string
+    server: full
+    title: user_data
 name: Classic 1
 package_name: Classic_1
 runtime_options:
@@ -17,3 +77,4 @@ services:
   server_config: {}
   source: /runtime/services/tables.yml
 startup_form: Form1
+uplink_visible: true
