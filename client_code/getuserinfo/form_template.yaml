@@ -1,0 +1,11 @@
+components:
+- layout_properties: {grid_position: 'EAGYYG,GXWYRR'}
+  name: text_box_2
+  properties: {align: center, enabled: false, text: 'User ID:'}
+  type: TextBox
+- layout_properties: {grid_position: 'EAGYYG,FZSMQY'}
+  name: user_id
+  properties: {}
+  type: TextBox
+container: {type: ColumnPanel}
+is_package: true
