@@ -1,0 +1,60 @@
+components:
+- layout_properties: {slot: nav-right}
+  name: card_3
+  properties: {role: card}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
+  name: card_2
+  properties: {role: card}
+  type: ColumnPanel
+- components: []
+  layout_properties: {slot: nav-right}
+  name: card_1
+  properties: {role: card}
+  type: ColumnPanel
+- components:
+  - event_bindings: {click: add_business_click}
+    layout_properties: {}
+    name: add_business
+    properties: {background: 'theme:Header Background', bold: true, enabled: true, icon: 'fa:address-card', italic: false, role: null, text: ' Add Business'}
+    type: Button
+  - event_bindings: {click: add_user_click}
+    layout_properties: {}
+    name: add_user
+    properties: {icon: 'fa:address-book-o', text: ' Add User'}
+    type: Button
+  - event_bindings: {click: add_funds_click}
+    name: add_funds
+    properties: {text: Add Funds}
+    type: Button
+  - event_bindings: {click: business_login_click}
+    layout_properties: {}
+    name: business_login
+    properties: {icon_align: left_edge, text: Business Login}
+    type: Button
+  - event_bindings: {click: user_login_click}
+    name: user_login
+    properties: {text: User Login}
+    type: Button
+  - event_bindings: {click: make_purchase_click}
+    layout_properties: {}
+    name: make_purchase
+    properties: {text: Make Purchase}
+    type: Button
+  - event_bindings: {click: get_user_info_click}
+    layout_properties: {}
+    name: get_user_info
+    properties: {text: Get User Info}
+    type: Button
+  layout_properties: {slot: default}
+  name: linear_panel_1
+  properties: {}
+  type: LinearPanel
+- layout_properties: {slot: title}
+  name: label_1
+  properties: {text: APP HOMEPAGE}
+  type: Label
+container:
+  properties: {html: '@theme:dashboard.html', visible: true}
+  type: HtmlTemplate
+is_package: true

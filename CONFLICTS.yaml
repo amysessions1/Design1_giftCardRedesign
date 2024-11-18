@@ -1,0 +1,14 @@
+conflicting_items:
+- app_path: [CODE, forms/Form1]
+  edit_delete: {deleted_by: B}
+  item: [client_code, Form1]
+- app_path: [CODE, server_modules/ServerModule1]
+  item: [server_code, ServerModule1]
+  text_chunks:
+  - alternatives:
+    - {l: 11, n: 170, s: A}
+    - {l: 181, n: 185, s: B}
+    start: 11
+merge:
+  base: 5dbcde5fb60eda8ae47012fd38d4e84aaa3c4cbd
+  parents: [a91574cd06bac2ef42882d410a3b1189264686ed, becf09ca620c3434c2c9347f6c186a161f8d8d41]

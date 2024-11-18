@@ -1,0 +1,35 @@
+components:
+- layout_properties: {grid_position: 'NDHOJX,TMNNVE'}
+  name: text_box_5
+  properties: {align: center, enabled: false, text: 'User''s Name:'}
+  type: TextBox
+- layout_properties: {grid_position: 'NDHOJX,CODAWU'}
+  name: user_name
+  properties: {align: center, text: ''}
+  type: TextBox
+- layout_properties: {grid_position: 'XNTOMJ,SGLHZB'}
+  name: text_box_6
+  properties: {align: center, enabled: false, text: User Username}
+  type: TextBox
+- layout_properties: {grid_position: 'XNTOMJ,WKTDAE'}
+  name: username
+  properties: {align: center}
+  type: TextBox
+- layout_properties: {grid_position: 'GRYPJN,JTJCIV'}
+  name: text_box_8
+  properties: {align: center, enabled: false, text: User Password}
+  type: TextBox
+- layout_properties: {grid_position: 'GRYPJN,CSVIGV'}
+  name: user_password
+  properties: {align: center}
+  type: TextBox
+- layout_properties: {grid_position: 'FUIZVP,SWZLCA'}
+  name: text_box_7
+  properties: {align: center, enabled: false, text: User Phonenumber}
+  type: TextBox
+- layout_properties: {grid_position: 'FUIZVP,VUIJKZ'}
+  name: user_phonenumber
+  properties: {align: center}
+  type: TextBox
+container: {type: ColumnPanel}
+is_package: true

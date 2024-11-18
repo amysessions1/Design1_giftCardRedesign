@@ -1,0 +1,19 @@
+components:
+- layout_properties: {grid_position: 'JBBWDT,VQOYVG'}
+  name: business_username
+  properties: {align: center, enabled: false, text: 'Business Username:'}
+  type: TextBox
+- layout_properties: {grid_position: 'JBBWDT,CTQLWK'}
+  name: business_user
+  properties: {align: center}
+  type: TextBox
+- layout_properties: {grid_position: 'CRWGEH,VPXPOG'}
+  name: business_password
+  properties: {align: center, enabled: false, text: 'Business Password:'}
+  type: TextBox
+- layout_properties: {grid_position: 'CRWGEH,GPHMUV'}
+  name: business_pw
+  properties: {align: center}
+  type: TextBox
+container: {type: ColumnPanel}
+is_package: true
