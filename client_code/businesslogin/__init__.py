@@ -14,5 +14,8 @@ class businesslogin(businessloginTemplate):
 
   def text_box_1_pressed_enter(self, **event_args):
     """This method is called when the user presses Enter in this text box"""
-    pass
+    username = self.business_user.text
+    password = self.business_pw.text
+    anvil.server.session['id'] = anvil.server.call('business_login',username,password)
+    print(anvil.server.session.get('id'))
     # Any code you write here will run before the form opens.
