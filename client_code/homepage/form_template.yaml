@@ -13,18 +13,15 @@ components:
   properties: {role: card}
   type: ColumnPanel
 - components:
-  - layout_properties: {}
-    name: business_list_panel
-    properties: {item_template: BusinessItemTemplate}
-    type: RepeatingPanel
   - event_bindings: {click: add_business_click}
     layout_properties: {}
     name: add_business
     properties: {background: 'theme:Header Background', bold: true, enabled: true, icon: 'fa:address-card', italic: false, role: null, text: ' Add Business'}
     type: Button
   - event_bindings: {click: add_user_click}
+    layout_properties: {}
     name: add_user
-    properties: {text: Add User}
+    properties: {icon: 'fa:address-book-o', text: ' Add User'}
     type: Button
   - event_bindings: {click: business_login_click}
     layout_properties: {}
