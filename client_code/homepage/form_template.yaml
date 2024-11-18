@@ -23,19 +23,18 @@ components:
     name: add_user
     properties: {icon: 'fa:address-book-o', text: ' Add User'}
     type: Button
+  - event_bindings: {click: add_funds_click}
+    name: add_funds
+    properties: {text: Add Funds}
+    type: Button
   - event_bindings: {click: business_login_click}
     layout_properties: {}
     name: business_login
     properties: {icon_align: left_edge, text: Business Login}
     type: Button
   - event_bindings: {click: user_login_click}
-    layout_properties: {}
     name: user_login
     properties: {text: User Login}
-    type: Button
-  - event_bindings: {click: add_funds_click}
-    name: add_funds
-    properties: {text: Add Funds}
     type: Button
   - event_bindings: {click: make_purchase_click}
     layout_properties: {}
@@ -51,10 +50,6 @@ components:
   name: linear_panel_1
   properties: {}
   type: LinearPanel
-- layout_properties: {slot: sidebar}
-  name: drop_down_1
-  properties: {}
-  type: DropDown
 - layout_properties: {slot: title}
   name: label_1
   properties: {text: APP HOMEPAGE}
