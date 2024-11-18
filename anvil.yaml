@@ -31,6 +31,20 @@ db_schema:
       type: string
     server: full
     title: business_data
+  unlinked:
+    client: none
+    columns:
+    - admin_ui: {order: 1, width: 200}
+      name: value
+      type: number
+    - admin_ui: {order: 0, width: 200}
+      name: unlinkedID
+      type: number
+    - admin_ui: {order: 4, width: 200}
+      name: businessID
+      type: number
+    server: full
+    title: unlinked
   user_data:
     client: none
     columns:

@@ -157,5 +157,25 @@ def get_business_info(business_id):
       return None
 
 
+@anvil.server.callable
+def add_unlinked(business_id, value):
+  add_data = {}
+  user_id = randrange(1000000000000000,9999999999999999)
+  #check if user_id is already assigned to another user
+  while app_tables.unlinked.get(unlinkedID=user_id) is not None:
+    user_id = randrange(1000000000000000,9999999999999999)
+  add_data['unlinkedID'] = user_id
+  add_data['value'] = value
+  add_data['businessID'] = business_id
+  print(add_data['value'])
+  app_tables.unlinked.add_row(**add_data)
+  return user_id
+
+@anvil.server.callable
+def claim_unlinked(unlinked_id,user_id):
+  row = dict(app_tables.unlinked.get(unlinkedID=unlinked_id))
+  add_funds(user_id, row['businessID'],row['value'])
+  app_tables.unlinked.get(unlinkedID=unlinked_id).delete()
+  
 
 
