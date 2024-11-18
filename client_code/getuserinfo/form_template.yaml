@@ -7,5 +7,10 @@ components:
   name: user_id
   properties: {}
   type: TextBox
+- event_bindings: {click: submit_button_click}
+  layout_properties: {grid_position: 'AANAGL,GUBAKY'}
+  name: submit_button
+  properties: {background: '#28fa19', text: Submit}
+  type: Button
 container: {type: ColumnPanel}
 is_package: true

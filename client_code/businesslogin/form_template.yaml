@@ -15,5 +15,10 @@ components:
   name: business_pw
   properties: {align: center}
   type: TextBox
+- event_bindings: {click: submit_button_click}
+  layout_properties: {grid_position: 'MPUVWA,NMQMME'}
+  name: login_button
+  properties: {background: '#28fa19', text: Login}
+  type: Button
 container: {type: ColumnPanel}
 is_package: true

@@ -11,6 +11,8 @@ class adduser(adduserTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-  def text_box_1_pressed_enter(self, **event_args):
+  def submit_button_click(self, **event_args):
     """This method is called when the user presses Enter in this text box"""
-    pass
+    user_name = self.user_name.text
+    
+       
