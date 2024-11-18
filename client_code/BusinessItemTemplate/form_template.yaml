@@ -1,3 +1,9 @@
-components: []
+components:
+- data_bindings:
+  - {code: 'self.label_1.text = self.item['''']', property: text, writeback: false}
+  layout_properties: {grid_position: 'XDQJRG,HTXNNW'}
+  name: Business
+  properties: {}
+  type: TextBox
 container: {type: ColumnPanel}
 is_package: true

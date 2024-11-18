@@ -1,26 +1,10 @@
 components:
-- layout_properties: {slot: nav-right}
-  name: card_3
-  properties: {role: card}
-  type: ColumnPanel
-- layout_properties: {slot: nav-right}
-  name: card_2
-  properties: {role: card}
-  type: ColumnPanel
-- components: []
-  layout_properties: {slot: nav-right}
-  name: card_1
-  properties: {role: card}
-  type: ColumnPanel
 - components:
   - event_bindings: {click: add_business_click}
     layout_properties: {}
     name: add_business
     properties: {background: 'theme:Header Background', bold: true, enabled: true, icon: 'fa:address-card', italic: false, role: null, text: ' Add Business'}
     type: Button
-  - name: repeating_panel_1
-    properties: {item_template: homepage.ItemTemplate6}
-    type: RepeatingPanel
   - event_bindings: {click: add_user_click}
     layout_properties: {}
     name: add_user

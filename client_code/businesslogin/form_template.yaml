@@ -15,5 +15,12 @@ components:
   name: business_pw
   properties: {align: center}
   type: TextBox
+- layout_properties: {grid_position: 'DQFLNH,NPLPLR'}
+  name: button_1
+  properties:
+    background: '#65d963'
+    text: |
+      Submit
+  type: Button
 container: {type: ColumnPanel}
 is_package: true
