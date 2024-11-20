@@ -1,0 +1,26 @@
+components:
+- layout_properties: {slot: default}
+  name: balances_title
+  properties: {font_size: 29, text: Current Balances}
+  type: Label
+- components:
+  - name: repeating_panel_1
+    properties: {item_template: Form1.RowTemplate1}
+    type: RepeatingPanel
+  layout_properties: {slot: default}
+  name: data_grid_1
+  properties:
+    columns:
+    - {data_key: column_1, id: JKSDUP, title: Business Name}
+    - {data_key: column_2, id: VJQQOR, title: Column 2}
+    - {data_key: column_3, id: OJLQEN, title: Column 3}
+  type: DataGrid
+container:
+  properties:
+    html: |-
+      <center style="font-style:italic; color:#888; margin: 3em;">
+        (Insert your custom HTML here)
+      </center>
+      <div anvil-slot="default"></div>
+  type: HtmlTemplate
+is_package: true
