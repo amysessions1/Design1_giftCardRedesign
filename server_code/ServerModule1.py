@@ -13,6 +13,7 @@ from random import randrange
 
 @anvil.server.callable
 def add_business(business_info):
+  print("adding business")
   #business_info should be a list of info in the form [{business name}, {business_username}, {business_password}] all as strings
   #generate business_id
   add_data={}
@@ -28,7 +29,9 @@ def add_business(business_info):
   add_data["username"] = business_info[1]
   add_data["password"] = business_info[2]
   #add business to business_data
+  print("add to business")
   app_tables.business_data.add_row(**add_data)
+  print("add to balances")
   #add business to balances table
   app_tables.balances.add_row(business=business_id, user_data={}, unlinked={})
   # balances.append([])

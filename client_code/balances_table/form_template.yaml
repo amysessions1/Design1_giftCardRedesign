@@ -5,7 +5,7 @@ components:
   type: Label
 - components:
   - name: repeating_panel_1
-    properties: {item_template: Form1.RowTemplate1}
+    properties: {item_template: balances_table.RowTemplate1}
     type: RepeatingPanel
   layout_properties: {slot: default}
   name: data_grid_1
