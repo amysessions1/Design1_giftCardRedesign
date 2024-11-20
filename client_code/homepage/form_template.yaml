@@ -46,6 +46,11 @@ components:
     name: get_user_info
     properties: {text: Get User Info}
     type: Button
+  - event_bindings: {click: demo_click}
+    layout_properties: {}
+    name: demo
+    properties: {text: process_demo}
+    type: Button
   layout_properties: {slot: default}
   name: linear_panel_1
   properties: {}
