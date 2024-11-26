@@ -76,8 +76,10 @@ def business_login(inp_username, inp_password):
 def user_login(inp_username, inp_password):
   user = app_tables.user_data.get(username=inp_username)
   if user['password'] == inp_password:
+    print(user['userID'])
     return user['userID']
   else:
+    print(f"User: {inp_username} Password: {inp_password} NOT FOUND")
     return None
 
 

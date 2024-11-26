@@ -4,6 +4,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
+from .. import globals
 
 
 class userlogin(userloginTemplate):
@@ -11,7 +12,8 @@ class userlogin(userloginTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-  def text_box_1_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
-    # Any code you write here will run before the form opens.
+  def submit_click(self, **event_args):
+    username = self.user_name.text
+    password = self.user_pw.text
+    globals.user_id = anvil.server.call('user_login',username,password)
+    print(globals.user_id)

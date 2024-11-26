@@ -122,6 +122,9 @@ class homepage(homepageTemplate):
 
     anvil.server.call('claim_unlinked', x, user)
 
+  def user_funds_click(self, **event_args):
+    open_form('balances_table')
+
 
 
 

@@ -51,6 +51,11 @@ components:
     name: demo
     properties: {text: process_demo}
     type: Button
+  - event_bindings: {click: user_funds_click}
+    layout_properties: {}
+    name: user_funds
+    properties: {text: User View Funds}
+    type: Button
   layout_properties: {slot: default}
   name: linear_panel_1
   properties: {}

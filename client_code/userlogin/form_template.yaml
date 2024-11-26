@@ -15,5 +15,10 @@ components:
   name: user_pw
   properties: {align: center}
   type: TextBox
+- event_bindings: {click: submit_click}
+  layout_properties: {grid_position: 'YHLVVF,NLSMXX'}
+  name: submit
+  properties: {background: '#00ff1e', text: submit}
+  type: Button
 container: {type: ColumnPanel}
 is_package: true

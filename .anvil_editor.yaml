@@ -20,7 +20,8 @@ unique_ids:
     homepage.ItemTemplate5: '1731900491212708162938052.299'
     makepurchase: '173073946089634637541872.63302'
     userlogin: '1730931219423618306657770.0211'
-  modules: {}
+  modules:
+    globals: '1732660356874184114809468.62045'
   scripts: {}
   server_modules:
     ServerModule1: '172954826868315604126944.416708'
