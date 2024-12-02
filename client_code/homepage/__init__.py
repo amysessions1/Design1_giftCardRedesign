@@ -11,12 +11,14 @@ from ..userlogin import userlogin
 from ..makepurchase import makepurchase
 from ..addfunds import addfunds
 from ..getuserinfo import getuserinfo
+from .. import globals
 
 
 class homepage(homepageTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.login.text = "Log in"
 
     # Any code you write here will run before the form opens.
 
@@ -39,6 +41,11 @@ class homepage(homepageTemplate):
       title="Business Login",
       large=True,
     )
+    if globals.business_id is not None:
+      username = anvil.server.call('get_business_info', globals.business_id)
+      self.login.text = f'Business: {username[0]}'
+    else:
+      self.login.text = "Log in"
     
   def user_login_click(self, **event_args):
     alert(
@@ -46,6 +53,11 @@ class homepage(homepageTemplate):
       title="User Login",
       large=True,
     )
+    if globals.user_id is not None:
+      username = anvil.server.call('get_user_info', globals.user_id)
+      self.login.text = f'User: {username[0]}'
+    else:
+      self.login.text = "Log in"
 
   def make_purchase_click(self, **event_args):
     alert(
