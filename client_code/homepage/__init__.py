@@ -96,8 +96,8 @@ class homepage(homepageTemplate):
     anvil.server.call("add_business",business_id)
 
 
-    user = anvil.server.call("user_login", "pianoMan12345", "password")
-    comp = anvil.server.call('business_login', "apple_company2", "password")
+    user = anvil.server.call("user_login", "pianoMan1234", "password")
+    comp = anvil.server.call('business_login', "apple_company", "password")
 
     anvil.server.call('add_funds', user, comp, 10.1)
     anvil.server.call('add_funds', user, comp, 10.5)
